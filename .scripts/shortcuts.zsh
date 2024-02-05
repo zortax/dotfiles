@@ -1,0 +1,52 @@
+#!/bin/zsh
+
+shrug() {
+    echo $em_shrug
+    echo $em_shrug | xsel -i -b
+}
+
+run() {
+    nohup $* >/dev/null 2>&1 &
+}
+
+open() {
+    nohup xdg-open $1 >/dev/null 2>&1 &
+}
+
+wrun() {
+    ~/.scripts/open_floating_window.sh $*
+}
+
+wopen() {
+    wrun xdg-open $*
+}
+
+pw() {
+    bw get password $1 | tr -d '\n' | xsel -i -b
+}
+
+bw-unlock() {
+    export BW_SESSION="$(bw unlock --raw)"
+}
+
+setwall() {
+    betterlockscreen -u $1 -r 2560x1440
+    betterlockscreen -w
+}
+
+lvim() {
+    kitty @ set-spacing margin=0
+    ~/.local/bin/lvim $@
+    kitty @ set-spacing margin=12
+}
+nvim() {
+    if [ "$TERM" = "xterm-kitty" ]; then
+        kitty @ set-spacing margin=0
+#        kitty @ set-colors ~/.config/kitty/dark-qualitative-darker-nvim.conf
+    fi
+    /usr/bin/nvim $@
+    if [ "$TERM" = "xterm-kitty" ]; then
+        kitty @ set-spacing margin=12
+#        kitty @ set-colors ~/.config/kitty/dark-qualitative-darker.conf
+    fi
+}

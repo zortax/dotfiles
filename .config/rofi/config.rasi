@@ -1,0 +1,20 @@
+@theme "~/.config/rofi/rounded-gray-dark.rasi"
+configuration {
+    display-combi: "";
+    show-icons: true;
+    drun-icon-theme: "Flat-Remix";
+    modi: "combi,calc,drun,window,ssh,emoji";
+    line: 7;
+    line-padding: 10;
+    matching: "fuzzy";
+    bw: 0;
+    padding: 0;
+    separator-style: "none";
+    hide-scrollbar: true;
+    line-margin: 0;
+    font: "hack 11";
+    terminal: "kitty";
+    ssh-command: "/usr/bin/kitty -e 'ssh' 'root@{host}'";
+    width: 30;
+}
+
