@@ -187,5 +187,11 @@
         },
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates"
+    },
+    "custom/mpris": {
+        "return-type": "json",
+        "exec": "waybar-mpris --position --autofocus",
+        "on-click": "waybar-mpris --send toggle",
+        "escape": true,
     }
 }
