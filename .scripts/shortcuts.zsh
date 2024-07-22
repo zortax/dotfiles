@@ -41,12 +41,12 @@ setwall() {
 # }
 # nvim() {
 #     if [ "$TERM" = "xterm-kitty" ]; then
-#         kitty @ set-spacing margin=0
-# #        kitty @ set-colors ~/.config/kitty/dark-qualitative-darker-nvim.conf
+# #        kitty @ set-spacing margin=0
+#         kitty @ set-colors ~/.config/kitty/dark-qualitative-darker-nvim.conf
 #     fi
 #     /usr/bin/nvim $@
 #     if [ "$TERM" = "xterm-kitty" ]; then
-#         kitty @ set-spacing margin=12
-# #        kitty @ set-colors ~/.config/kitty/dark-qualitative-darker.conf
+# #        kitty @ set-spacing margin=12
+#         kitty @ set-colors ~/.config/kitty/dark-qualitative-darker.conf
 #     fi
 # }

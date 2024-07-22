@@ -3,7 +3,7 @@ configuration {
     display-combi: "";
     show-icons: true;
     drun-icon-theme: "Flat-Remix";
-    modi: "combi,calc,drun,window,ssh,emoji";
+    modi: "combi,drun,window,ssh";
     line: 7;
     line-padding: 10;
     matching: "fuzzy";
