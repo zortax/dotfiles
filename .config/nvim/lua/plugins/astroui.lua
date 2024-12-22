@@ -3,21 +3,13 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
-local colorscheme = function()
-  if vim.g.neovide then
-    return "kanagawa-dragon"
-  else
-    return "catppuccin-macchiato"
-  end
-end
-
 ---@type LazySpec
 return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = colorscheme(),
+    colorscheme = "oldworld",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes

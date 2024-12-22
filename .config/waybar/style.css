@@ -12,7 +12,8 @@
 @define-color base0B #a1b56c;
 @define-color base0C #86c1b9;
 @define-color base0D #7cafc2;
-@define-color base0E #ba8baf;
+/* @define-color base0E #ba8baf; */
+@define-color base0E #87c48e;
 @define-color base0F #a16946;
 
 * {
@@ -53,8 +54,10 @@
 
 #workspaces button.active {
   border-radius: 4px;
-  background-color: #c6a0f6;
-  color: #4c00a8;
+  /* background-color: #c6a0f6; */
+  background-color: #87c48e;
+  /* color: #4c00a8; */
+  color: #1a3b1d;
 }
 
 #workspaces button.urgent {
