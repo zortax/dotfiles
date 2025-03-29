@@ -1,27 +1,6 @@
--- This will run last in the setup process and is a good place to configure
--- things like custom filetypes. This is just pure lua so anything that doesn't
+-- This will run last in the setup process.
+-- This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
-
--- Set up custom filetypes
--- vim.filetype.add {
---   extension = {
---     foo = "fooscript",
---   },
---   filename = {
---     ["Foofile"] = "fooscript",
---   },
---   pattern = {
---     ["~/%.config/foo/.*"] = "fooscript",
---   },
--- }
-
--- if vim.g.neovide then
---   vim.o.guifont = "Hack Nerd Font Mono:b:h15"
---   vim.g.neovide_scale_factor = 1.0
---   vim.g.neovide_cursor_trail_size = 0.2
---   vim.g.neovide_transparency = 1.0
--- end
-
 vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
   callback = function()
     local normal = vim.api.nvim_get_hl(0, { name = "Normal" })

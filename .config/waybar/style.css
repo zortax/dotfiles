@@ -1,6 +1,8 @@
 @define-color base00 #181818;
 @define-color base01 #1a1b1c;
-@define-color base02 #3b3e47;
+/*@define-color base02 #3b3e47;*/
+@define-color base02 #99917f;
+
 @define-color base03 #585858;
 @define-color base04 #b8b8b8;
 @define-color base05 #d8d8d8;
@@ -16,6 +18,8 @@
 @define-color base0E #87c48e;
 @define-color base0F #a16946;
 
+@define-color module-text #282828;
+
 * {
   transition: none;
   box-shadow: none;
@@ -26,7 +30,7 @@
   font-size: 1em;
   font-weight: bold;
   color: @base04;
-  background: #1a1b1c;
+  background: #282828;
 }
 
 #workspaces {
@@ -46,7 +50,7 @@
 #workspaces button {
   margin: 0px 0px;
   padding: 0 4px;
-  color: @base05;
+  color: @module-text;
 }
 
 #workspaces button.visible {
@@ -55,9 +59,10 @@
 #workspaces button.active {
   border-radius: 4px;
   /* background-color: #c6a0f6; */
-  background-color: #87c48e;
+  /* background-color: #87c48e; */
+  background-color: #ebdba1;
   /* color: #4c00a8; */
-  color: #1a3b1d;
+  color: #282828;
 }
 
 #workspaces button.urgent {
@@ -96,6 +101,7 @@
   margin: 4px 2px;
   padding: 0 6px;
   background-color: @base02;
+  color: @module-text;
   border-radius: 4px;
   min-width: 20px;
 }
@@ -112,6 +118,7 @@
   margin-left: 0px;
   margin-right: 4px;
   background-color: transparent;
+  color: @base04;
 }
 
 #temperature.critical {

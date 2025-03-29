@@ -5,6 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  branch = "feat/astro-v5",
 
   -- PACKS
   { import = "astrocommunity.pack.lua" },
@@ -25,7 +26,22 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
 
   -- COMPLETION
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.avante-nvim" },
+  {
+    "avante.nvim",
+    opts = {
+      provider = "copilot",
+      copilot = {
+        model = "claude-3.7-sonnet",
+        auto_suggestions_provider = "copilot",
+      },
+      cursor_applying_provder = "copilot",
+      behaviour = {
+        enable_cursor_planning_mode = true,
+      },
+    },
+  },
 
   -- MISC
   { import = "astrocommunity.scrolling.vim-smoothie" },
@@ -39,6 +55,7 @@ return {
       end
     end,
   },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
   -- COLOR SCHEMES
   { import = "astrocommunity.colorscheme.github-nvim-theme" },
